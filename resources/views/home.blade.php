@@ -102,7 +102,6 @@ Quinta Al-Gharb
                 <div class="parallax" data-rellax-percentage="0.5" data-rellax-speed="3">
                   <div class="py-11 shadow-lg" data-zanim-xs='{"delay":0.1,"animation":"zoom-out"}' data-zanim-lg='{"delay":0.1}' data-zanim-trigger="scroll">
                     <div class="bg-holder rounded-left" style="background-image:url(/img/quinta/kitchen3.jpg);">
-                      <div class="bg-youtube" data-property='{"videoURL":"https://www.youtube.com/watch?v=Kra1eWAiKvE","startAt":0,"stopAt":57,"mute":true,"showYTLogo":false}'></div>
                     </div>
                     <!--/.bg-holder-->
                   </div>
