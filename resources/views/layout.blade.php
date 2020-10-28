@@ -63,6 +63,9 @@
       </div>
       <div class="fancynavbar-collapse">
         <ul class="fancynavbar-nav">
+          <li class="fancynav-item">
+            <a class="fancynav-link" href="page-portfolio.html"><span class="fancynav-link-content">home</span></a>
+          </li>
           <li class="fancynav-item fancy-dropdown">
             <a class="fancynav-link fancy-dropdown-toggle" href="JavaScript:void(0)"><span class="fancynav-link-content">bungalow</span></a>
             <div class="fancy-dropdown-menu">
@@ -76,9 +79,6 @@
                 </div>
               </div>
             </div>
-          </li>
-          <li class="fancynav-item">
-            <a class="fancynav-link" href="page-portfolio.html"><span class="fancynav-link-content">home</span></a>
           </li>
           <li class="fancynav-item">
             <a class="fancynav-link" href="page-contact.html"><span class="fancynav-link-content">contact</span></a>
