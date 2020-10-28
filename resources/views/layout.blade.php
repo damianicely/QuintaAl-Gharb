@@ -28,11 +28,12 @@
     <link href="/lib/loaders.css/loaders.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
     <link href="/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
-    <link href="/lib/jquery.mb.ytplayer/jquery.mb.YTPlayer.min.css" rel="stylesheet">
+    <link href="/lib/lightbox2/css/lightbox.min.css" rel="stylesheet">
+    <link href="/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
   </head>
 
-  <body class="has-sidemenu has-sidemenu-right overflow-hidden-x">
+  <body class="has-sidemenu overflow-hidden-x">
 
     <!--===============================================-->
     <!--    Fancynav-->
@@ -53,7 +54,11 @@
           </div>
         <div class="fancynavbar-addon">
           <a class="fancynavbar-addon-item" href="#"><span class="fab fa-facebook"></span></a>
-          <a class="fancynavbar-addon-item" href="#languageModal" data-toggle="modal"><span class="text-sans-serif ls font-weight-black fs--1 d-block">EN</span></a>
+          <a class="fancynavbar-addon-item" href="#languageModal" data-toggle="modal">
+            <span class="text-sans-serif ls font-weight-black fs--1 d-block text-uppercase">
+              {{ $locale }}
+            </span>
+          </a>
         </div>
       </div>
       <div class="fancynavbar-collapse">
@@ -63,11 +68,11 @@
             <div class="fancy-dropdown-menu">
               <div class="row pb-4 pt-3">
                 <div class="col-auto">
-                  <a class="fancy-dropdown-item" href="/">bungalow 1</a>
-                  <a class="fancy-dropdown-item" href="/">bungalow 2</a>
-                  <a class="fancy-dropdown-item" href="/">bungalow 3</a>
-                  <a class="fancy-dropdown-item" href="/">bungalow 4</a>
-                  <a class="fancy-dropdown-item" href="/">bungalow 5</a>
+                  <a class="fancy-dropdown-item" href="/1001nights">1001 Nights</a>
+                  <a class="fancy-dropdown-item" href="/palmeira">Palmeira</a>
+                  <a class="fancy-dropdown-item" href="/alshams">Al Shams</a>
+                  <a class="fancy-dropdown-item" href="/buganvillia">Buganvillia</a>
+                  <a class="fancy-dropdown-item" href="/laranja">Laranja</a>
                 </div>
               </div>
             </div>
@@ -140,26 +145,44 @@
     <!--    Modal for language selection-->
     <!--===============================================-->
     <!-- Modal-->
-    <div class="modal fade fade-in" id="languageModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-xs mx-auto" role="document">
-        <div class="modal-content bg-black">
-          <div class="modal-body text-center p-0">
-            <button class="close text-white position-absolute t-0 r-0 times-icon mt-2 mr-2 p-2" type="button" data-dismiss="modal" aria-label="Close"></button>
-            <ul class="list-unstyled pl-0 my-0 py-4 text-sans-serif">
-              <li>
-                <a class="text-white font-weight-bold pt-1 d-block" href="home-default.html">English</a>
-              </li>
-              <li>
-                <a class="pt-1 d-block text-500" href="#">Portugues</a>
-              </li>
-              <li>
-                <a class="pt-1 d-block text-500" href="#">Deutsche</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+<div class="modal fade fade-in" id="languageModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xs mx-auto" role="document">
+    <div class="modal-content bg-black">
+      <div class="modal-body text-center p-0">
+        <button class="close text-white position-absolute t-0 r-0 times-icon mt-2 mr-2 p-2" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <ul class="list-unstyled pl-0 my-0 py-4 text-sans-serif">
+          <li>
+            <a class="pt-1 d-block 
+                @if ($locale === 'en')
+                    text-white font-weight-bold 
+                @else
+                    text-500
+                @endif
+                " href="/set-language/en">English</a>
+          </li>
+          <li>
+            <a class="pt-1 d-block 
+                @if ($locale === 'de')
+                    text-white font-weight-bold 
+                @else
+                    text-500
+                @endif
+                " href="/set-language/de">Deutsche</a>
+          </li>
+          <li>
+            <a class="pt-1 d-block 
+                @if ($locale === 'pt')
+                    text-white font-weight-bold 
+                @else
+                    text-500
+                @endif
+                " href="/set-language/pt">Português</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- ===============================================-->
     <!--    JavaScripts-->
@@ -174,7 +197,7 @@
     <script src="/lib/jtap/jquery.tap.js"></script>
     <script src="/js/rellax.min.js"></script>
     <script src="/lib/fancybox/jquery.fancybox.min.js"></script>
-    <script src="/lib/jquery.mb.ytplayer/jquery.mb.YTPlayer.min.js"></script>
+    <script src="/lib/owl.carousel/owl.carousel.js"></script>
     <script src="/js/theme.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw&callback=initMap" async></script>
   </body>

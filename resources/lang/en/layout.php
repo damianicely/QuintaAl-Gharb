@@ -11,7 +11,9 @@ return [
     | the website. In particular anything that is shared across multiple pages.
     |
     */
-
+    // Bungalow Language Files
+    'description'=>'Description',
+    'facilities'=>'Facilities',
     // Footer
     'foot-love'=>'Made with',
     'foot-by'=>'by',

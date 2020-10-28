@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', function () { return view('home'); });
+Route::get('/1001nights', function () { return view('1001nights'); });
+Route::get('/palmeira', function () { return view('palmeira'); });
+Route::get('/alshams', function () { return view('alshams'); });
+Route::get('/buganvillia', function () { return view('buganvillia'); });
+Route::get('/laranja', function () { return view('laranja'); });
+
+Route::get('/set-language/{locale}', 'App\Http\Controllers\LocalizationController@index');
